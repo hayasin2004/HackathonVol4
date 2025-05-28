@@ -1,0 +1,35 @@
+{
+  "name": "hackathon-vol4",
+  "displayName": "Hackathon vol4",
+  "version": "0.0.1",
+  "description": "Hackathon-Vol4",
+  "author": "masataka",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "check:precommit": "npx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true && git update-index --again",
+    "check:prepush": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true"
+  },
+  "dependencies": {
+    "plasmo": "0.90.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
+    "@types/chrome": "0.0.258",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "lefthook": "^1.11.13",
+    "prettier": "3.2.4",
+    "typescript": "5.3.3"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://*/*"
+    ]
+  }
+}
