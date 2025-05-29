@@ -10,7 +10,7 @@ function IndexPopup() {
 			}}
 		>
 			<h2>
-				Welcome to your{' '}
+				Welcome to your{''}
 				<a
 					href='https://www.plasmo.com'
 					target='_blank'
