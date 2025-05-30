@@ -1,10 +1,12 @@
+import type { MessageMetadata } from '@/interfaces';
 import { axiosGet } from '@/libs';
-import octokitClient from '@/libs/octokitClient';
 import { parseGithubUrl } from '@/utils';
+import type { PlasmoMessaging } from '@plasmohq/messaging';
+import octokitClient from '../libs/octokitClient';
 
 /**
  * GitHubリポジトリの指定URLからファイルツリーを再帰的に取得し、
- * ファイルのパスと中身をテキストでまとめて返すhook
+ * ファイルのパスと中身をテキストでまとめて返す関数
  *
  * - URLはリポジトリのルート、特定のブランチ、特定のフォルダやファイルパスまで対応可能
  * - ref (ブランチやコミット指定) が無い (現在のURLから取得できなかった) 場合はリポジトリのデフォルトブランチを使用
@@ -15,7 +17,7 @@ import { parseGithubUrl } from '@/utils';
  *
  * @throws {Error} URLの解析に失敗した場合やAPI通信に問題があった場合はエラーを投げる可能性あり
  */
-export const useGithubFileTreeFunction = async (url: string) => {
+export const makeGithubFileTreeFunction = async (url: string) => {
 	// URL から必要な情報を抽出
 	const parsed = parseGithubUrl(url);
 	// URL が不正なら return
@@ -67,3 +69,18 @@ export const useGithubFileTreeFunction = async (url: string) => {
 
 	return result.join('\n');
 };
+
+const handler: PlasmoMessaging.MessageHandler<
+	MessageMetadata['github-file-tree']['req'],
+	MessageMetadata['github-file-tree']['res']
+> = async (req, res) => {
+	if (!req.body) {
+		res.send('No body provided');
+		return;
+	}
+	const { url } = req.body;
+	const result = await makeGithubFileTreeFunction(url);
+	res.send(result);
+};
+
+export default handler;
