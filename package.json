@@ -9,9 +9,15 @@
 		"build": "plasmo build",
 		"package": "plasmo package",
 		"check:precommit": "npx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true && git update-index --again",
-		"check:prepush": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true"
+		"check:prepush": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true",
+		"postinstall": "npx lefthook install"
 	},
 	"dependencies": {
+		"@emotion/cache": "^11.14.0",
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.0",
+		"@mui/icons-material": "^7.1.0",
+		"@mui/material": "^7.1.0",
 		"plasmo": "0.90.5",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
