@@ -1,4 +1,5 @@
-import { MemoryRouter, Route, Routes } from 'react-router-dom/dist';
+import { TopPage } from '@/pages';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
 export const Routing = () => {
 	return (
@@ -6,7 +7,7 @@ export const Routing = () => {
 			<Routes>
 				<Route
 					path='/'
-					element={<div>あ</div>}
+					element={<TopPage />}
 				/>
 			</Routes>
 		</MemoryRouter>
