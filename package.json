@@ -9,7 +9,8 @@
 		"build": "plasmo build",
 		"package": "plasmo package",
 		"check:precommit": "npx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true && git update-index --again",
-		"check:prepush": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true"
+		"check:prepush": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true",
+		"postinstall": "npx lefthook install"
 	},
 	"dependencies": {
 		"@emotion/cache": "^11.14.0",

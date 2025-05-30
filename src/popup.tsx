@@ -11,5 +11,3 @@ function IndexPopup() {
 		</ThemeProvider>
 	);
 }
-
-export default IndexPopup;
