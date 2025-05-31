@@ -1,5 +1,5 @@
 {
-	"name": "HackathonVol4",
+	"name": "hackathonvol4",
 	"displayName": "Hackathon vol4",
 	"version": "0.0.1",
 	"description": "Hackathon-Vol4",
@@ -9,12 +9,27 @@
 		"build": "plasmo build",
 		"package": "plasmo package",
 		"check:precommit": "npx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true && git update-index --again",
-		"check:prepush": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true"
+		"check:prepush": "npx biome check --no-errors-on-unmatched --files-ignore-unknown=true",
+		"postinstall": "npx lefthook install"
 	},
 	"dependencies": {
+		"@emotion/cache": "11.11.0",
+		"@emotion/react": "11.11.1",
+		"@emotion/styled": "11.11.0",
+		"@mui/icons-material": "^6.4.7",
+		"@mui/material": "5.14.5",
+		"@octokit/rest": "^22.0.0",
+		"@plasmohq/messaging": "^0.7.1",
+		"@tanstack/react-query": "^5.79.0",
+		"add": "^2.0.6",
+		"axios": "^1.9.0",
 		"plasmo": "0.90.5",
+		"pnpm": "^10.11.0",
 		"react": "18.2.0",
-		"react-dom": "18.2.0"
+		"react-dom": "18.2.0",
+		"react-router-dom": "^7.6.1",
+		"remove": "^0.1.5",
+		"zod": "^3.25.42"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
