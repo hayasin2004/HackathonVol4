@@ -1,0 +1,113 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f9b52692-12d1-4253-9bda-b34a3cc2a563\" name=\"変更\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;hayasin2004&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/hayasin2004/HackathonVol4.git&quot;,\r\n    &quot;accountId&quot;: &quot;03c27282-a02f-4119-9f13-550ee4d5a5a5&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2xiqw6vUzP6mTZSZFPDd6a23xeD\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Masat&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;npm.build.executor&quot;: &quot;Run&quot;,\r\n    &quot;npm.dev.executor&quot;: &quot;Run&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,\r\n    &quot;ts.external.directory.path&quot;: &quot;C:\\\\Users\\\\Masat\\\\OneDrive\\\\デスクトップ\\\\Hackathon\\\\HackathonVol4\\\\hackathon-vol4\\\\node_modules\\\\typescript\\\\lib&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Masat\\OneDrive\\デスクトップ\\Hackathon\\HackathonVol4\\hackathon-vol4\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"npm.dev\">\r\n    <configuration name=\"build\" type=\"js.build_tools.npm\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <package-json value=\"$PROJECT_DIR$/hackathon-vol4/package.json\" />\r\n      <command value=\"run\" />\r\n      <scripts>\r\n        <script value=\"build\" />\r\n      </scripts>\r\n      <node-interpreter value=\"project\" />\r\n      <envs />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"dev\" type=\"js.build_tools.npm\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <package-json value=\"$PROJECT_DIR$/hackathon-vol4/package.json\" />\r\n      <command value=\"run\" />\r\n      <scripts>\r\n        <script value=\"dev\" />\r\n      </scripts>\r\n      <node-interpreter value=\"project\" />\r\n      <envs />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"npm.dev\" />\r\n        <item itemvalue=\"npm.build\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-WS-242.20224.342\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"アプリケーションレベル\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"デフォルトタスク\">\r\n      <changelist id=\"f9b52692-12d1-4253-9bda-b34a3cc2a563\" name=\"変更\" comment=\"\" />\r\n      <created>1748431478204</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1748431478204</updated>\r\n      <workItem from=\"1748431480156\" duration=\"1876000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ee64ece59e20ec06c7041006984389c9b8391d38)
++++ b/.idea/workspace.xml	(date 1748667982161)
+@@ -4,7 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f9b52692-12d1-4253-9bda-b34a3cc2a563" name="変更" comment="" />
++    <list default="true" id="f9b52692-12d1-4253-9bda-b34a3cc2a563" name="変更" comment="">
++      <change beforePath="$PROJECT_DIR$/.prettierrc.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.mjs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/biome.json" beforeDir="false" afterPath="$PROJECT_DIR$/biome.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -22,7 +27,7 @@
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+     &quot;url&quot;: &quot;https://github.com/hayasin2004/HackathonVol4.git&quot;,
+-    &quot;accountId&quot;: &quot;03c27282-a02f-4119-9f13-550ee4d5a5a5&quot;
++    &quot;accountId&quot;: &quot;137fbede-85d2-46ec-a2f7-c0ed2809593e&quot;
+   }
+ }</component>
+   <component name="ProjectColorInfo">{
+@@ -36,7 +41,7 @@
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+     &quot;last_opened_file_path&quot;: &quot;C:/Users/Masat&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+@@ -46,7 +51,7 @@
+     &quot;npm.build.executor&quot;: &quot;Run&quot;,
+     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Masat\\OneDrive\\デスクトップ\\Hackathon\\HackathonVol4\\hackathon-vol4\\node_modules\\typescript\\lib&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Masat\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
+@@ -55,7 +60,17 @@
+       <recent name="C:\Users\Masat\OneDrive\デスクトップ\Hackathon\HackathonVol4\hackathon-vol4" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="npm.dev">
++  <component name="RunManager" selected="npm.dev (1)">
++    <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
++      <package-json value="$PROJECT_DIR$/package.json" />
++      <command value="run" />
++      <scripts>
++        <script value="build" />
++      </scripts>
++      <node-interpreter value="project" />
++      <envs />
++      <method v="2" />
++    </configuration>
+     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+       <package-json value="$PROJECT_DIR$/hackathon-vol4/package.json" />
+       <command value="run" />
+@@ -66,6 +81,16 @@
+       <envs />
+       <method v="2" />
+     </configuration>
++    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
++      <package-json value="$PROJECT_DIR$/package.json" />
++      <command value="run" />
++      <scripts>
++        <script value="dev" />
++      </scripts>
++      <node-interpreter value="project" />
++      <envs />
++      <method v="2" />
++    </configuration>
+     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+       <package-json value="$PROJECT_DIR$/hackathon-vol4/package.json" />
+       <command value="run" />
+@@ -78,6 +103,8 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="npm.dev (1)" />
++        <item itemvalue="npm.build (1)" />
+         <item itemvalue="npm.dev" />
+         <item itemvalue="npm.build" />
+       </list>
+@@ -86,7 +113,7 @@
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-WS-242.20224.342" />
++        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -99,6 +126,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1748431478204</updated>
+       <workItem from="1748431480156" duration="1876000" />
++      <workItem from="1748485099974" duration="298000" />
+     </task>
+     <servers />
+   </component>
