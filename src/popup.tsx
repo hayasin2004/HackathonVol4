@@ -1,44 +1,35 @@
-import Summary from '@/components/summary/Summary';
-import type { MessageMetadata } from '@/interfaces';
-import { sendToBackground } from '@plasmohq/messaging';
+import { ThemeProvider } from '@emotion/react';
+import { Box, Button, CssBaseline } from '@mui/material';
 import { useState } from 'react';
+import { ProviderTree, getStyle } from './providers';
+import { Routing } from './routes';
+import { darkTheme, lightTheme } from './themes';
+
+document.head.appendChild(getStyle());
 
 function IndexPopup() {
-	const [explanation, setExplanation] = useState<string>('');
-	// const [loading, setLoading] = useState<boolean>(false);
+	const [isDark, setIsDark] = useState(true);
 
-	const handleExplainWord = async () => {
-		// setLoading(true);
-		const handleGeminiFunction = async () => {
-			console.log('発火');
-
-			const result = await sendToBackground<
-				MessageMetadata['gemini']['req'],
-				MessageMetadata['gemini']['res']
-			>({
-				name: 'gemini',
-				body: { contents: 'おはよう' },
-			});
-			setExplanation(result);
-			return result;
-		};
-		await handleGeminiFunction();
-		console.log('関数が呼び終わっているのか');
+	const toggleTheme = () => {
+		setIsDark((prev) => !prev);
 	};
 
 	return (
-		<div>
-			<h2>「おはよう」の意味説fgsdht明</h2>
-			<button
-				type={'submit'}
-				onClick={handleExplainWord}
-			>
-				これで生成してみよう
-			</button>
-
-			{/*<LoadingButton loading={loading} onClick={handleExplainWord} />*/}
-			{explanation && <Summary text={explanation} />}
-		</div>
+		<ProviderTree>
+			<ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+				<CssBaseline />
+				<Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 3 }}>
+					<Button
+						onClick={toggleTheme}
+						variant='outlined'
+						sx={{ mt: 2 }}
+					>
+						{isDark ? 'ライトモードに切り替え' : 'ダークモードに切り替え'}
+					</Button>
+				</Box>
+				<Routing />
+			</ThemeProvider>
+		</ProviderTree>
 	);
 }
 
