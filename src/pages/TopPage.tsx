@@ -1,4 +1,4 @@
-import { MyTextField } from '@/components/MyTextField';
+import { MyMarkdownField } from '@/components/MyMarkdownField';
 import { useGithubFileTreeBackground } from '@/hooks';
 import { getActiveTabUrl } from '@/utils';
 import { Box } from '@mui/material';
@@ -7,6 +7,9 @@ import { MyButton } from '../components/MyButton';
 
 export const TopPage = () => {
 	const [url, setUrl] = useState<string | null>(null);
+
+	const disMarkMock: string =
+		'# 見出し\n - まさたかダディダディ\n - どすこいわっしょいピーポーピーポー';
 
 	useEffect(() => {
 		getActiveTabUrl().then(setUrl);
@@ -39,7 +42,7 @@ export const TopPage = () => {
 				onClick={handleClick}
 				disabled={!url}
 			/>
-			<MyTextField />
+			<MyMarkdownField markdown={disMarkMock} />
 		</Box>
 	);
 };
