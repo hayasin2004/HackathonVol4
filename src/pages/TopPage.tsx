@@ -1,7 +1,9 @@
+import { MyTextField } from '@/components/MyTextField';
 import { useGithubFileTreeBackground } from '@/hooks';
 import { getActiveTabUrl } from '@/utils';
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { MyButton } from '../components/MyButton';
 
 export const TopPage = () => {
 	const [url, setUrl] = useState<string | null>(null);
@@ -25,16 +27,19 @@ export const TopPage = () => {
 	};
 	return (
 		<Box
-			width={300}
+			sx={{ mt: 4 }}
+			width={400}
 			height={300}
+			display='flex'
+			flexDirection='column'
+			alignItems='center'
+			gap={2}
 		>
-			<Button
-				variant='outlined'
+			<MyButton
 				onClick={handleClick}
 				disabled={!url}
-			>
-				aaaaaaaa
-			</Button>
+			/>
+			<MyTextField />
 		</Box>
 	);
 };
