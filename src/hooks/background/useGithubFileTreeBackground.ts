@@ -5,7 +5,6 @@ import { useQuery } from '@tanstack/react-query';
 
 export const useGithubFileTreeBackground = (url: string) => {
 	const handleGithubFileTree = async (url: string) => {
-		console.log('発火');
 		const result = await sendToBackground<
 			MessageMetadata['github-file-tree']['req'],
 			MessageMetadata['github-file-tree']['res']
@@ -20,5 +19,6 @@ export const useGithubFileTreeBackground = (url: string) => {
 		queryKey: [tanstackKeys.githubFileTree, url],
 		queryFn: () => handleGithubFileTree(url),
 		staleTime: Number.POSITIVE_INFINITY,
+		enabled: false,
 	});
 };
