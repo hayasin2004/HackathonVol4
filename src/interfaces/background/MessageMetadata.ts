@@ -6,5 +6,5 @@ type MessageBase<Req = void, Res = void> = {
 export interface MessageMetadata
 	extends Record<string, MessageBase<unknown, unknown>> {
 	'github-file-tree': MessageBase<{ url: string }, string>;
-	gemini: MessageBase<{ contents: string }, string>;
+	gemini: MessageBase<{ content: string }, string>;
 }

@@ -1,27 +1,26 @@
-import * as process from 'node:process';
 import type { MessageMetadata } from '@/interfaces';
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import type { PlasmoMessaging } from '@plasmohq/messaging';
 
-const api = process.env.PLASMO_PUBLIC_GEMINI_API_KEY;
-const genAI = new GoogleGenAI({ apiKey: api });
+/**
+ * Gemini に文字列を渡して返答を取得する関数
+ * @param content ユーザーの入力内容
+ * @returns Gemini からの返答テキスト
+ */
+const generateGeminiAnswer = async (content: string): Promise<string> => {
+	const apiKey = process.env.PLASMO_PUBLIC_GEMINI_API_KEY;
+	if (!apiKey) throw new Error('Google API Key is not set.');
 
-const geminiFunction = async () => {
+	const genAI = new GoogleGenerativeAI(apiKey);
+	const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+
 	try {
-		console.log('geminiの関数が呼ばれていないの？');
-		const model = await genAI.models.generateContent({
-			model: 'gemini-1.5-flash',
-			contents: 'おはようの説明して',
-		});
-		// const prompt = `「おはよう」という単語について詳しく説明してください。以下の内容を含めてください`;
-		// const result = await model.generateContent(prompt);
-		// const response = result.response;
-		// const explanation = response.text();
-		console.log(model.text);
-		return model.text;
+		const result = await model.generateContent(content);
+		const response = result.response;
+		return response.text();
 	} catch (error) {
-		console.error('単語説明エラー:', error);
-		return '';
+		console.error('Gemini Error:', error);
+		return 'エラーが発生しました。';
 	}
 };
 
@@ -33,12 +32,9 @@ const handler: PlasmoMessaging.MessageHandler<
 		res.send('No body provided');
 		return;
 	}
-	console.log('ハンドラーの関数が呼ばれていないの？');
-
-	const result = await geminiFunction();
-	if (result) {
-		res.send(result);
-	}
+	const { content } = req.body;
+	const result = await generateGeminiAnswer(content);
+	res.send(result);
 };
 
 export default handler;

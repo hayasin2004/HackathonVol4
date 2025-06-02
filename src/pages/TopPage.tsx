@@ -1,48 +1,101 @@
-import { MyMarkdownField } from '@/components/MyMarkdownField';
-import { useGithubFileTreeBackground } from '@/hooks';
-import { getActiveTabUrl } from '@/utils';
+import {
+	TopPageButton,
+	TopPageCopyButton,
+	TopPageLoadingMd,
+	TopPageMarkdown,
+} from '@/components';
+import { useGeminiBackground, useGithubFileTreeBackground } from '@/hooks';
+import { getActiveTabUrl, parseGithubUrl } from '@/utils';
 import { Box } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { MyButton } from '../components/MyButton';
 
 export const TopPage = () => {
 	const [url, setUrl] = useState<string | null>(null);
-
-	const disMarkMock: string =
-		'# 見出し\n - まさたかダディダディ\n - どすこいわっしょいピーポーピーポー';
+	const [generated, setGenerated] = useState<string>('');
+	const [isGeminiLoading, setIsGeminiLoading] = useState<boolean>(false);
+	const [isGithubUrl, setIsGithubUrl] = useState<boolean>(false);
 
 	useEffect(() => {
-		getActiveTabUrl().then(setUrl);
+		const initialize = async () => {
+			const currentUrl = await getActiveTabUrl();
+			const parsedUrl = parseGithubUrl(currentUrl);
+			if (!parsedUrl) {
+				return;
+			}
+			getActiveTabUrl().then(setUrl);
+			setIsGithubUrl(true);
+		};
+		initialize();
 	}, []);
-	console.log(url);
 
-	const { data, isFetched, refetch } = useGithubFileTreeBackground(url ?? '');
-	console.log(data);
+	const { data, isFetched, isLoading, refetch } = useGithubFileTreeBackground(
+		url ?? '',
+	);
+	const { handleGemini } = useGeminiBackground();
 
 	const handleClick = async () => {
-		const currentUrl = await getActiveTabUrl();
-		setUrl(currentUrl);
-		if (!isFetched) {
-			refetch();
-		} else {
-			console.log('キャッシュを使用中:', data);
+		try {
+			const currentUrl = await getActiveTabUrl();
+			const parsedUrl = parseGithubUrl(currentUrl);
+			if (!parsedUrl) {
+				setGenerated('NOT GITHUB');
+				return;
+			}
+			setIsGeminiLoading(true);
+			setUrl(currentUrl);
+			if (!isFetched) {
+				// URL から新しく生成
+				const githubTreeString = await refetch();
+				console.log(githubTreeString.data);
+				const aaa = await handleGemini(
+					`${githubTreeString.data}\n上記はある github リポジトリの一部または全体のソースコードです。ソースコードを元にリポジトリ全体ないしは部分的なドキュメントをmd形式で生成してください。また返答はmdファイルの内容のみです。日本語でお願いします`,
+				);
+				setGenerated(aaa);
+			} else {
+				// 同じ URL に対するリクエストにはキャッシュを適用
+				console.log('キャッシュを使用中:', data);
+				const aaa = await handleGemini(
+					`${data}\n上記はある github リポジトリの一部または全体のソースコードです。ソースコードを元にリポジトリ全体ないしは部分的なドキュメントをmd形式で生成してください。また返答はmdファイルの内容のみです。日本語でお願いします`,
+				);
+				setGenerated(aaa);
+			}
+		} catch (error) {
+			console.error(error);
+		} finally {
+			setIsGeminiLoading(false);
 		}
 	};
 	return (
 		<Box
-			sx={{ mt: 4 }}
 			width={400}
-			height={300}
+			maxHeight={500}
 			display='flex'
 			flexDirection='column'
 			alignItems='center'
 			gap={2}
+			padding='40px 20px'
 		>
-			<MyButton
+			<TopPageButton
+				disabled={isLoading || isGeminiLoading}
+				isGithubUrl={isGithubUrl}
 				onClick={handleClick}
-				disabled={!url}
 			/>
-			<MyMarkdownField markdown={disMarkMock} />
+			{isLoading || isGeminiLoading ? (
+				<TopPageLoadingMd url={url || ''} />
+			) : (
+				generated && (
+					<Box
+						display='flex'
+						flexDirection='column'
+						alignItems='center'
+						gap={5}
+						width='100%'
+					>
+						<TopPageCopyButton copytext={generated} />
+						<TopPageMarkdown content={generated} />
+					</Box>
+				)
+			)}
 		</Box>
 	);
 };

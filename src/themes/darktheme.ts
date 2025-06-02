@@ -1,13 +1,11 @@
 import { createTheme } from '@mui/material';
+import { teal } from '@mui/material/colors';
 
 export const darkTheme = createTheme({
 	palette: {
 		mode: 'dark',
-	},
-});
-
-export const lightTheme = createTheme({
-	palette: {
-		mode: 'light',
+		primary: {
+			main: teal.A400,
+		},
 	},
 });

@@ -21,7 +21,7 @@ export const parseGithubUrl = (
 ): ParseGithubUrlReturns | undefined => {
 	// とりあえず http, https どちらでも通すことに (s の有無を許容)
 	const m =
-		/^https?:\/\/github\.com\/([^/]+)\/([^/]+)(?:\/(?:tree|blob)\/([^/]+)(?:\/(.*))?)?/.exec(
+		/^https?:\/\/github\.com\/([^/]+)\/([^/]+)(?:\/(?:tree|blob)\/[^/]+(?:\/(.*))?)?$/.exec(
 			raw,
 		);
 	if (!m) return undefined;
@@ -31,10 +31,9 @@ export const parseGithubUrl = (
 	// 例えば URL 形式が https://github.com/owner/repo (ルートディレクトリを見ている) などの場合、
 	// ref (ブランチ情報) が含まれない。
 	// path も同様に URL の長さによっては含まれないこともある。
-	return {
-		owner: m[1],
-		repo: m[2],
-		ref: m[3],
-		path: m[4],
-	};
+	const owner = m[1];
+	const repo = m[2];
+	const path = m[3] ? decodeURIComponent(m[3]) : undefined;
+
+	return { owner: owner, repo: repo, path: path };
 };

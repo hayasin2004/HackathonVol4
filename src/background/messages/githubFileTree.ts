@@ -21,14 +21,16 @@ export const makeGithubFileTreeFunction = async (url: string) => {
 	// URL から必要な情報を抽出
 	const parsed = parseGithubUrl(url);
 	// URL が不正なら return
-	if (!parsed) return '';
-	let { owner, repo, ref, path } = parsed;
-
-	// ref がなければリポジトリに設定されたデフォルトブランチを取得して補完
-	if (!ref) {
-		const res = await octokitClient.repos.get({ owner, repo });
-		ref = res.data.default_branch;
+	if (!parsed) {
+		console.log('URLが不正です');
+		return '';
 	}
+	const { owner, repo, path } = parsed;
+	console.log(`path: ${path}`);
+
+	// リポジトリに設定されたデフォルトブランチを取得して補完
+	const res = await octokitClient.repos.get({ owner, repo });
+	const ref = res.data.default_branch;
 
 	// ディレクトリの場合は配列、ファイル単体の場合は単一オブジェクトなので配列に統一する
 	const files: { path: string; content: string }[] = [];
