@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b52692-12d1-4253-9bda-b34a3cc2a563" name="変更" comment="">
+    <list default="true" id="f9b52692-12d1-4253-9bda-b34a3cc2a563" name="変更" comment="プロンプト改訂しました">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/libs/ParseGithubUrlReturns.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/libs/ParseGithubUrlReturns.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/TopPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +40,16 @@
   "selectedUrlAndAccountId": {
     "url": "https://github.com/hayasin2004/HackathonVol4.git",
     "accountId": "03c27282-a02f-4119-9f13-550ee4d5a5a5"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "hayasin2004",
+    "repository": "HackathonVol4"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -64,7 +74,7 @@
     "npm.build.executor": "Run",
     "npm.dev (1).executor": "Run",
     "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Masat\\OneDrive\\デスクトップ\\HAL2年\\zisyuuyou\\HackathonVol4\\node_modules\\prettier",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Masat\\OneDrive\\デスクトップ\\Hackathon\\HackathonVol4\\node_modules\\prettier",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "ts.external.directory.path": "C:\\Users\\Masat\\OneDrive\\デスクトップ\\Hackathon\\HackathonVol4\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -148,8 +158,17 @@
       <workItem from="1748752123625" duration="276000" />
       <workItem from="1748752510755" duration="738000" />
       <workItem from="1748788334723" duration="724000" />
-      <workItem from="1749131322864" duration="1030000" />
+      <workItem from="1749131322864" duration="2485000" />
     </task>
+    <task id="LOCAL-00001" summary="プロンプト改訂しました">
+      <option name="closed" value="true" />
+      <created>1749132379653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749132379653</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +185,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/develop" />
+                        <option value="origin/feature/#19" />
                       </list>
                     </value>
                   </entry>
@@ -177,5 +196,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="プロンプト改訂しました" />
+    <option name="LAST_COMMIT_MESSAGE" value="プロンプト改訂しました" />
   </component>
 </project>

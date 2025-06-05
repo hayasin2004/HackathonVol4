@@ -22,7 +22,7 @@ export const TopPage = () => {
 			if (!parsedUrl) {
 				return;
 			}
-			setUrl(currentUrl);
+			getActiveTabUrl().then(setUrl);
 			setIsGithubUrl(true);
 		};
 		initialize();
@@ -46,8 +46,9 @@ export const TopPage = () => {
 			if (!isFetched) {
 				// URL から新しく生成
 				const githubTreeString = await refetch();
-				const prompt = `
-					リポジトリ名: ${parsedUrl.repoName}
+				console.log(githubTreeString.data);
+				const aaa = await handleGemini(
+					`リポジトリ名: ${parsedUrl.repoName}
 					説明: ${parsedUrl.repoDescription}
 					言語: ${parsedUrl.primaryLanguage}
 					README内容: ${githubTreeString.data}
@@ -77,17 +78,17 @@ export const TopPage = () => {
 					注意事項:
 					- 依存関係の複雑さ
 					- 設定の注意点
-					- 既知の制限事項
-				`;
-				const aaa = await handleGemini(prompt);
+					- 既知の制限事項`,
+				);
 				setGenerated(aaa);
 			} else {
 				// 同じ URL に対するリクエストにはキャッシュを適用
-				const prompt = `
-					リポジトリ名: ${parsedUrl.repoName}
+				console.log('キャッシュを使用中:', data);
+				const aaa = await handleGemini(
+					`リポジトリ名: ${parsedUrl.repoName}
 					説明: ${parsedUrl.repoDescription}
 					言語: ${parsedUrl.primaryLanguage}
-					README内容: ${data}
+					README内容: ${githubTreeString.data}
 					ディレクトリ構造: ${parsedUrl.directoryTree}
 					主要ファイル一覧: ${parsedUrl.importantFiles}
 
@@ -114,9 +115,8 @@ export const TopPage = () => {
 					注意事項:
 					- 依存関係の複雑さ
 					- 設定の注意点
-					- 既知の制限事項
-				`;
-				const aaa = await handleGemini(prompt);
+					- 既知の制限事項`,
+				);
 				setGenerated(aaa);
 			}
 		} catch (error) {
@@ -125,7 +125,6 @@ export const TopPage = () => {
 			setIsGeminiLoading(false);
 		}
 	};
-
 	return (
 		<Box
 			width={400}
