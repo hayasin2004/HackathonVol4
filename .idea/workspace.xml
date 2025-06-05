@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9b52692-12d1-4253-9bda-b34a3cc2a563" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/2025_05_31_14_10______.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/2025_05_31_14_10_の_更新_前の未コミットの変更_[変更]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/background/messages/gemini.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loadingButton/LoadingButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/summary/Summary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/background/MessageMetadata.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/background/MessageMetadata.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/popup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/libs/ParseGithubUrlReturns.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/libs/ParseGithubUrlReturns.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TopPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/#19" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,12 +36,12 @@
     &quot;assignee&quot;: &quot;hayasin2004&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/hayasin2004/HackathonVol4.git&quot;,
-    &quot;accountId&quot;: &quot;137fbede-85d2-46ec-a2f7-c0ed2809593e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/hayasin2004/HackathonVol4.git",
+    "accountId": "03c27282-a02f-4119-9f13-550ee4d5a5a5"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -61,26 +50,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/#13&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Masat&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Masat\\OneDrive\\デスクトップ\\HAL2年\\zisyuuyou\\HackathonVol4\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Masat\\OneDrive\\デスクトップ\\HAL2年\\zisyuuyou\\HackathonVol4\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/#22",
+    "last_opened_file_path": "C:/Users/Masat",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev (1).executor": "Run",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Masat\\OneDrive\\デスクトップ\\HAL2年\\zisyuuyou\\HackathonVol4\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "ts.external.directory.path": "C:\\Users\\Masat\\OneDrive\\デスクトップ\\Hackathon\\HackathonVol4\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Masat\OneDrive\デスクトップ\Hackathon\HackathonVol4\hackathon-vol4" />
@@ -139,7 +128,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-WS-242.20224.342" />
       </set>
     </attachedChunks>
   </component>
@@ -159,6 +148,7 @@
       <workItem from="1748752123625" duration="276000" />
       <workItem from="1748752510755" duration="738000" />
       <workItem from="1748788334723" duration="724000" />
+      <workItem from="1749131322864" duration="1030000" />
     </task>
     <servers />
   </component>
@@ -176,7 +166,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature/#13" />
+                        <option value="origin/develop" />
                       </list>
                     </value>
                   </entry>

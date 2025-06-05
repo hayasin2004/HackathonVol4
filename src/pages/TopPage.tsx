@@ -22,7 +22,7 @@ export const TopPage = () => {
 			if (!parsedUrl) {
 				return;
 			}
-			getActiveTabUrl().then(setUrl);
+			setUrl(currentUrl);
 			setIsGithubUrl(true);
 		};
 		initialize();
@@ -46,17 +46,77 @@ export const TopPage = () => {
 			if (!isFetched) {
 				// URL から新しく生成
 				const githubTreeString = await refetch();
-				console.log(githubTreeString.data);
-				const aaa = await handleGemini(
-					`${githubTreeString.data}\n上記はある github リポジトリの一部または全体のソースコードです。ソースコードを元にリポジトリ全体ないしは部分的なドキュメントをmd形式で生成してください。また返答はmdファイルの内容のみです。日本語でお願いします`,
-				);
+				const prompt = `
+					リポジトリ名: ${parsedUrl.repoName}
+					説明: ${parsedUrl.repoDescription}
+					言語: ${parsedUrl.primaryLanguage}
+					README内容: ${githubTreeString.data}
+					ディレクトリ構造: ${parsedUrl.directoryTree}
+					主要ファイル一覧: ${parsedUrl.importantFiles}
+
+					要約生成要件:
+					1. 一言説明: このプロジェクトを一文で説明
+					2. 技術スタック: 使用技術の要約
+					3. プロジェクトタイプ: Webアプリ/API/ライブラリ/ツール/その他
+
+					アーキテクチャ概要:
+					- フォルダ構成の意図
+					- 主要コンポーネント
+					- 設計パターンの特徴
+
+					開発・使用方法:
+					- セットアップ手順（推測）
+					- 実行方法
+					- 主要コマンド
+
+					注目ポイント:
+					- 技術的に興味深い部分
+					- 学習価値
+					- 実用性
+
+					注意事項:
+					- 依存関係の複雑さ
+					- 設定の注意点
+					- 既知の制限事項
+				`;
+				const aaa = await handleGemini(prompt);
 				setGenerated(aaa);
 			} else {
 				// 同じ URL に対するリクエストにはキャッシュを適用
-				console.log('キャッシュを使用中:', data);
-				const aaa = await handleGemini(
-					`${data}\n上記はある github リポジトリの一部または全体のソースコードです。ソースコードを元にリポジトリ全体ないしは部分的なドキュメントをmd形式で生成してください。また返答はmdファイルの内容のみです。日本語でお願いします`,
-				);
+				const prompt = `
+					リポジトリ名: ${parsedUrl.repoName}
+					説明: ${parsedUrl.repoDescription}
+					言語: ${parsedUrl.primaryLanguage}
+					README内容: ${data}
+					ディレクトリ構造: ${parsedUrl.directoryTree}
+					主要ファイル一覧: ${parsedUrl.importantFiles}
+
+					要約生成要件:
+					1. 一言説明: このプロジェクトを一文で説明
+					2. 技術スタック: 使用技術の要約
+					3. プロジェクトタイプ: Webアプリ/API/ライブラリ/ツール/その他
+
+					アーキテクチャ概要:
+					- フォルダ構成の意図
+					- 主要コンポーネント
+					- 設計パターンの特徴
+
+					開発・使用方法:
+					- セットアップ手順（推測）
+					- 実行方法
+					- 主要コマンド
+
+					注目ポイント:
+					- 技術的に興味深い部分
+					- 学習価値
+					- 実用性
+
+					注意事項:
+					- 依存関係の複雑さ
+					- 設定の注意点
+					- 既知の制限事項
+				`;
+				const aaa = await handleGemini(prompt);
 				setGenerated(aaa);
 			}
 		} catch (error) {
@@ -65,6 +125,7 @@ export const TopPage = () => {
 			setIsGeminiLoading(false);
 		}
 	};
+
 	return (
 		<Box
 			width={400}
