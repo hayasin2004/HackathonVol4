@@ -50,8 +50,7 @@ export const TopPage = () => {
 				const aaa = await handleGemini(
 					`リポジトリ名: ${parsedUrl.repoName}
 					説明: ${parsedUrl.repoDescription}
-					言語: ${parsedUrl.primaryLanguage}
-					README内容: ${githubTreeString.data}
+					言語: ${parsedUrl.primaryLanguage}　
 					ディレクトリ構造: ${parsedUrl.directoryTree}
 					主要ファイル一覧: ${parsedUrl.importantFiles}
 
@@ -87,8 +86,7 @@ export const TopPage = () => {
 				const aaa = await handleGemini(
 					`リポジトリ名: ${parsedUrl.repoName}
 					説明: ${parsedUrl.repoDescription}
-					言語: ${parsedUrl.primaryLanguage}
-					README内容: ${githubTreeString.data}
+					言語: ${parsedUrl.primaryLanguage}　
 					ディレクトリ構造: ${parsedUrl.directoryTree}
 					主要ファイル一覧: ${parsedUrl.importantFiles}
 
