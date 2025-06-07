@@ -46,7 +46,7 @@ export const TopPage = () => {
 			if (!isFetched) {
 				// URL から新しく生成
 				const githubTreeString = await refetch();
-				console.log(githubTreeString.data);
+				// console.log(githubTreeString.data);
 				const aaa = await handleGemini(
 					`リポジトリ名: ${parsedUrl.repoName}
 					説明: ${parsedUrl.repoDescription}
