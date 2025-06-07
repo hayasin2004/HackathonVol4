@@ -46,7 +46,7 @@ export const TopPage = () => {
 			if (!isFetched) {
 				// URL から新しく生成
 				const githubTreeString = await refetch();
-				console.log(githubTreeString.data);
+				// console.log(githubTreeString.data);
 				const aaa = await handleGemini(
 					`${githubTreeString.data}\n上記はある github リポジトリの一部または全体のソースコードです。ソースコードを元にリポジトリ全体ないしは部分的なドキュメントをmd形式で生成してください。また返答はmdファイルの内容のみです。日本語でお願いします`,
 				);

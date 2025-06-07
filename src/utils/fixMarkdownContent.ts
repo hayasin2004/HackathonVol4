@@ -1,3 +1,6 @@
+// fixMarkdownContent
+// markdownの「閉じ忘れ補正」　+ 「最終構文チェック」
+
 import { micromark } from 'micromark';
 
 export const fixMarkdownContent = (row: string): string => {
