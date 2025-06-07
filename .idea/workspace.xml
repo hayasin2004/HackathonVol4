@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b52692-12d1-4253-9bda-b34a3cc2a563" name="変更" comment="ひなたくんのプロンプトに直しました">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/TopPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TopPage.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="f9b52692-12d1-4253-9bda-b34a3cc2a563" name="変更" comment="プロンプトの改訂＋コードブロック生成" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,7 +156,7 @@
       <workItem from="1748788334723" duration="724000" />
       <workItem from="1749131322864" duration="2898000" />
       <workItem from="1749134429572" duration="890000" />
-      <workItem from="1749271404532" duration="4935000" />
+      <workItem from="1749271404532" duration="5343000" />
     </task>
     <task id="LOCAL-00001" summary="プロンプト改訂しました">
       <option name="closed" value="true" />
@@ -202,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749274902227</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="プロンプトの改訂＋コードブロック生成">
+      <option name="closed" value="true" />
+      <created>1749277766946</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749277766946</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +240,7 @@
     <MESSAGE value="プロンプト改訂して、実行も成功しましt" />
     <MESSAGE value="プロンプト改訂して、実行も成功しました。文章に多少変えました。" />
     <MESSAGE value="ひなたくんのプロンプトに直しました" />
-    <option name="LAST_COMMIT_MESSAGE" value="ひなたくんのプロンプトに直しました" />
+    <MESSAGE value="プロンプトの改訂＋コードブロック生成" />
+    <option name="LAST_COMMIT_MESSAGE" value="プロンプトの改訂＋コードブロック生成" />
   </component>
 </project>
