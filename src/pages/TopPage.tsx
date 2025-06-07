@@ -17,11 +17,11 @@ export const TopPage = () => {
 
 	useEffect(() => {
 		const initialize = async () => {
-			const currentUrl = await getActiveTabUrl();
-			const parsedUrl = parseGithubUrl(currentUrl);
-			if (!parsedUrl) {
-				return;
-			}
+			// const currentUrl = await getActiveTabUrl();
+			// const parsedUrl = parseGithubUrl(currentUrl);
+			// if (!parsedUrl) {
+			//   return;
+			// }
 			getActiveTabUrl().then(setUrl);
 			setIsGithubUrl(true);
 		};
@@ -48,11 +48,7 @@ export const TopPage = () => {
 				const githubTreeString = await refetch();
 				console.log(githubTreeString.data);
 				const aaa = await handleGemini(
-					`リポジトリ名: ${parsedUrl.repoName}
-					説明: ${parsedUrl.repoDescription}
-					言語: ${parsedUrl.primaryLanguage}　
-					ディレクトリ構造: ${parsedUrl.directoryTree}
-					主要ファイル一覧: ${parsedUrl.importantFiles}
+					`リポジトリ名:${githubTreeString.data}
 
 					要約生成要件:
 					1. 一言説明: このプロジェクトを一文で説明
@@ -84,11 +80,7 @@ export const TopPage = () => {
 				// 同じ URL に対するリクエストにはキャッシュを適用
 				console.log('キャッシュを使用中:', data);
 				const aaa = await handleGemini(
-					`リポジトリ名: ${parsedUrl.repoName}
-					説明: ${parsedUrl.repoDescription}
-					言語: ${parsedUrl.primaryLanguage}　
-					ディレクトリ構造: ${parsedUrl.directoryTree}
-					主要ファイル一覧: ${parsedUrl.importantFiles}
+					`リポジトリ名:${data}
 
 					要約生成要件:
 					1. 一言説明: このプロジェクトを一文で説明
