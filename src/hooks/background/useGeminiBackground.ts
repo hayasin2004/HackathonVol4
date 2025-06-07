@@ -10,7 +10,7 @@ export const useGeminiBackground = () => {
 			name: 'gemini',
 			body: { content },
 		});
-		console.log('result--->', result);
+		console.log(result);
 		return result;
 	};
 
