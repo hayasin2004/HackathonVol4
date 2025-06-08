@@ -146,7 +146,7 @@ export const TopPage = () => {
 						display='flex'
 						flexDirection='column'
 						alignItems='center'
-						gap={5}
+						gap={2}
 						width='100%'
 					>
 						<TopPageCopyButton copytext={generated} />
