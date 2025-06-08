@@ -125,13 +125,13 @@ export const TopPage = () => {
 	};
 	return (
 		<Box
-			width={400}
-			maxHeight={500}
+			width={600}
+			maxHeight={700}
 			display='flex'
 			flexDirection='column'
 			alignItems='center'
 			gap={2}
-			padding='40px 20px'
+			padding='45px 25px'
 		>
 			<TopPageButton
 				disabled={isLoading || isGeminiLoading}
