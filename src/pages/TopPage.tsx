@@ -3,11 +3,13 @@ import {
 	TopPageCopyButton,
 	TopPageLoadingMd,
 	TopPageMarkdown,
+	MarkdownDownloaderButton,
 } from '@/components';
 import { useGeminiBackground, useGithubFileTreeBackground } from '@/hooks';
 import { getActiveTabUrl, parseGithubUrl } from '@/utils';
 import { Box } from '@mui/material';
 import { useEffect, useState } from 'react';
+
 
 export const TopPage = () => {
 	const [url, setUrl] = useState<string | null>(null);
@@ -150,6 +152,7 @@ export const TopPage = () => {
 						width='100%'
 					>
 						<TopPageCopyButton copytext={generated} />
+						<MarkdownDownloaderButton copytext={generated} />
 						<TopPageMarkdown content={generated} />
 					</Box>
 				)
