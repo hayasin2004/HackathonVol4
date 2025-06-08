@@ -3,11 +3,13 @@ import {
 	TopPageCopyButton,
 	TopPageLoadingMd,
 	TopPageMarkdown,
+	MarkdownDownloaderButton,
 } from '@/components';
 import { useGeminiBackground, useGithubFileTreeBackground } from '@/hooks';
 import { getActiveTabUrl, parseGithubUrl } from '@/utils';
 import { Box } from '@mui/material';
 import { useEffect, useState } from 'react';
+
 
 export const TopPage = () => {
 	const [url, setUrl] = useState<string | null>(null);
@@ -55,7 +57,7 @@ export const TopPage = () => {
                     2. 一言説明: このプロジェクトを一文で説明
                     3. 技術スタック: 使用技術の要約
                     4. プロジェクトタイプ: Webアプリ/API/ライブラリ/ツール/その他
-                    5. コードブロックでの説明があると好ましい
+                    5. コードブロックでの説明は必須
 
                     アーキテクチャ概要:
                     - フォルダ構成の意図
@@ -90,7 +92,7 @@ export const TopPage = () => {
                     2. 一言説明: このプロジェクトを一文で説明
                     3. 技術スタック: 使用技術の要約
                     4. プロジェクトタイプ: Webアプリ/API/ライブラリ/ツール/その他
-                    5. コードブロックでの説明があると好ましい
+                    5. コードブロックでの説明は必須
 
 
                     アーキテクチャ概要:
@@ -123,13 +125,13 @@ export const TopPage = () => {
 	};
 	return (
 		<Box
-			width={400}
-			maxHeight={500}
+			width={600}
+			maxHeight={700}
 			display='flex'
 			flexDirection='column'
 			alignItems='center'
 			gap={2}
-			padding='40px 20px'
+			padding='45px 25px'
 		>
 			<TopPageButton
 				disabled={isLoading || isGeminiLoading}
@@ -144,10 +146,11 @@ export const TopPage = () => {
 						display='flex'
 						flexDirection='column'
 						alignItems='center'
-						gap={5}
+						gap={2}
 						width='100%'
 					>
 						<TopPageCopyButton copytext={generated} />
+						<MarkdownDownloaderButton copytext={generated} />
 						<TopPageMarkdown content={generated} />
 					</Box>
 				)
